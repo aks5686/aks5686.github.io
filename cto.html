@@ -794,6 +794,14 @@
     document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
 
     // CONTACT FORM — AJAX with validation
+    let feedbackTimer;
+    function showFeedback(el, type, msg) {
+      clearTimeout(feedbackTimer);
+      el.className = 'form-feedback ' + type;
+      el.textContent = msg;
+      feedbackTimer = setTimeout(() => { el.className = 'form-feedback'; el.textContent = ''; document.querySelectorAll('.form-group input.error, .form-group textarea.error').forEach(f => f.classList.remove('error')); }, 5000);
+    }
+
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -812,8 +820,7 @@
       if (!message.value.trim()) { message.classList.add('error'); valid = false; }
 
       if (!valid) {
-        feedback.className = 'form-feedback error';
-        feedback.textContent = 'Please fill in all fields correctly.';
+        showFeedback(feedback, 'error', 'Please fill in all fields correctly.');
         return;
       }
 
@@ -832,18 +839,16 @@
         });
         const data = await response.json();
         if (response.ok) {
-          feedback.className = 'form-feedback success';
-          feedback.textContent = '✓ Message sent! I\'ll get back to you soon.';
+          showFeedback(feedback, 'success', '✓ Message sent! I\'ll get back to you soon.');
           contactForm.reset();
         } else {
           const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : (data.error || 'Submission failed.');
           throw new Error(errMsg);
         }
       } catch (err) {
-        feedback.className = 'form-feedback error';
-        feedback.textContent = (err && err.message && err.message !== 'Failed to fetch')
+        showFeedback(feedback, 'error', (err && err.message && err.message !== 'Failed to fetch')
           ? err.message
-          : 'Something went wrong. Please email me directly at aks5686@gmail.com';
+          : 'Something went wrong. Please email me directly at aks5686@gmail.com');
       } finally {
         btn.textContent = 'Send message →';
         btn.disabled = false;
