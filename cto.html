@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
+  <link id="favicon-32" rel="icon" type="image/png" sizes="32x32" href="assets/images/icon-set/light/icon-32.png" />
+  <link id="favicon-16" rel="icon" type="image/png" sizes="16x16" href="assets/images/icon-set/light/icon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon-set/light/icon-180.png" />
   <title>Ayush Kumar Sethi — Mobile Architect & CTO</title>
   <meta name="description" content="Mobile Technical Architect and CTO with 15+ years building iOS, Android, Flutter and React Native apps used by millions globally." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -169,10 +172,11 @@
     }
     .hero-photo {
       width: 260px; height: 340px; border-radius: 2rem;
-      object-fit: cover; object-position: top;
+      object-fit: cover; object-position: center;
       border: 3px solid var(--border); display: block;
       pointer-events: none; -webkit-user-drag: none;
     }
+    img { -webkit-user-drag: none; user-select: none; }
     .hero-stats {
       display: flex; gap: 2.5rem; margin-top: 3rem;
       padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap;
@@ -233,7 +237,8 @@
       border: 1.5px dashed var(--accent2);
       background: linear-gradient(135deg, var(--card) 0%, rgba(232,99,42,0.03) 100%);
     }
-    .skill-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+    .skill-icon { font-size: 1.75rem; margin-bottom: 1rem; display: flex; align-items: center; }
+    .skill-icon img { width: 2rem; height: 2rem; object-fit: contain; pointer-events: none; }
     .skill-card h3 {
       font-family: 'Syne', sans-serif; font-weight: 700;
       font-size: 1rem; color: var(--text); margin-bottom: 0.5rem;
@@ -263,9 +268,11 @@
       display: flex; align-items: center; justify-content: space-between;
       margin-bottom: 1rem; gap: 0.5rem;
     }
-    .project-company {
-      font-size: 0.75rem; font-weight: 600; color: var(--accent2);
-      text-transform: uppercase; letter-spacing: 0.08em;
+    .project-app-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      object-fit: cover; flex-shrink: 0;
+      pointer-events: none; -webkit-user-drag: none;
+      border: 1px solid var(--border);
     }
     .project-scale {
       font-size: 0.75rem; color: var(--text2); background: var(--tag-bg);
@@ -348,6 +355,7 @@
       transition: border-color 0.2s, transform 0.2s;
     }
     .contact-link:hover { border-color: var(--accent2); color: var(--accent2); transform: translateX(4px); }
+    .contact-link-icon { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; pointer-events: none; }
 
     footer {
       text-align: center; padding: 2rem; font-size: 0.8rem;
@@ -451,7 +459,7 @@
         <div>
           <h2 class="section-title fade-up fade-up-delay-1">15 years of mobile.<br/>Built to last.</h2>
           <div class="about-text fade-up fade-up-delay-2">
-            <p>I'm <strong>Ayush Kumar Sethi</strong> — a Mobile Technical Architect open to global opportunities across the UK, UAE, Australia, Canada and remote-first roles worldwide.</p>
+            <p>I'm <strong>Ayush Kumar Sethi</strong> — a Mobile Technical Architect open to global opportunities, with a strong preference for remote-first and relocation-friendly roles worldwide.</p>
             <p>My career spans the full mobile stack — from native iOS and Android to cross-platform Flutter, React Native and Capacitor. I've architected products used by <strong>120 million people</strong>, led engineering teams, driven pre-sales engagements, and delivered across fintech, health tech, enterprise and consumer domains.</p>
             <p>I actively leverage AI tools — Claude Code, ChatGPT, Codex, Cursor — as genuine productivity multipliers throughout the development lifecycle.</p>
           </div>
@@ -485,7 +493,7 @@
       <p class="section-sub fade-up fade-up-delay-2">Deep across native and cross-platform, with architectural thinking at every layer.</p>
       <div class="skills-grid">
         <div class="skill-card fade-up">
-          <div class="skill-icon">🍎</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ios.svg" alt="iOS" draggable="false" /></div>
           <h3>iOS Development</h3>
           <div class="skill-tags">
             <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span>
@@ -493,7 +501,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-1">
-          <div class="skill-icon">🤖</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/android.svg" alt="Android" draggable="false" /></div>
           <h3>Android Development</h3>
           <div class="skill-tags">
             <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span>
@@ -501,7 +509,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-2">
-          <div class="skill-icon">⚡</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/cross-platform.svg" alt="Cross-Platform" draggable="false" /></div>
           <h3>Cross-Platform</h3>
           <div class="skill-tags">
             <span class="tag">Flutter</span><span class="tag">React Native</span>
@@ -509,7 +517,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-3">
-          <div class="skill-icon">🏗️</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/architecture.svg" alt="Architecture" draggable="false" /></div>
           <h3>Architecture & Design</h3>
           <div class="skill-tags">
             <span class="tag">MVVM</span><span class="tag">VIPER</span><span class="tag">Clean Architecture</span>
@@ -517,7 +525,7 @@
           </div>
         </div>
         <div class="skill-card fade-up">
-          <div class="skill-icon">🔄</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ci-cd.svg" alt="CI/CD" draggable="false" /></div>
           <h3>DevOps & CI/CD</h3>
           <div class="skill-tags">
             <span class="tag">GitHub Actions</span><span class="tag">Fastlane</span>
@@ -525,7 +533,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-1">
-          <div class="skill-icon">🧠</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ai.svg" alt="AI" draggable="false" /></div>
           <h3>AI-Assisted Development</h3>
           <div class="skill-tags">
             <span class="tag">Claude Code</span><span class="tag">ChatGPT</span>
@@ -533,7 +541,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-2">
-          <div class="skill-icon">👥</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/leader.svg" alt="Leadership" draggable="false" /></div>
           <h3>Leadership & Delivery</h3>
           <div class="skill-tags">
             <span class="tag">Team Mentoring</span><span class="tag">Pre-Sales</span>
@@ -542,7 +550,7 @@
           </div>
         </div>
         <div class="skill-card exploring fade-up fade-up-delay-3">
-          <div class="skill-icon">🔭</div>
+          <div class="skill-icon"><img src="assets/images/themeicons/explore.svg" alt="Exploring" draggable="false" /></div>
           <h3>Currently Exploring</h3>
           <div class="exploring-label">Active learning</div>
           <div class="skill-tags">
@@ -563,7 +571,7 @@
       <div class="projects-grid">
         <div class="project-card fade-up">
           <div class="project-meta">
-            <span class="project-company">Teon</span>
+            <img src="assets/images/projectIcons/outline.webp" alt="Outline VPN" class="project-app-icon" draggable="false" />
             <span class="project-scale">Millions of users</span>
           </div>
           <h3>Outline VPN</h3>
@@ -575,7 +583,33 @@
         </div>
         <div class="project-card fade-up fade-up-delay-1">
           <div class="project-meta">
-            <span class="project-company">Intrasoft</span>
+            <img src="assets/images/projectIcons/netskill.webp" alt="NetSkill" class="project-app-icon" draggable="false" />
+            <span class="project-scale">EdTech</span>
+          </div>
+          <h3>NetSkill</h3>
+          <p>Enterprise learning and development platform offering gamified, microlearning-based training. Built cross-platform mobile apps delivering personalised learning journeys at scale.</p>
+          <div class="project-links">
+            <a href="https://www.netskill.com/" target="_blank" class="project-link">Website</a>
+            <a href="https://apps.apple.com/au/app/netskill-learner-app/id6503343647" target="_blank" class="project-link">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.netskill.app" target="_blank" class="project-link">Play Store</a>
+          </div>
+        </div>
+        <div class="project-card fade-up fade-up-delay-2">
+          <div class="project-meta">
+            <img src="assets/images/projectIcons/sanmarg.webp" alt="Sanmarg" class="project-app-icon" draggable="false" />
+            <span class="project-scale">News & Media</span>
+          </div>
+          <h3>Sanmarg Hindi Daily</h3>
+          <p>Digital transformation of one of India's leading Hindi newspapers. Architected mobile platform for daily news delivery, push notifications and offline reading across iOS and Android.</p>
+          <div class="project-links">
+            <a href="https://sanmarg.in/" target="_blank" class="project-link">Website</a>
+            <a href="https://apps.apple.com/in/app/sanmarg-hindi-daily/id6478143397" target="_blank" class="project-link">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.sanmarg.android.v1" target="_blank" class="project-link">Play Store</a>
+          </div>
+        </div>
+        <div class="project-card fade-up fade-up-delay-3">
+          <div class="project-meta">
+            <img src="assets/images/projectIcons/123g.webp" alt="123Greetings" class="project-app-icon" draggable="false" />
             <span class="project-scale">120M+ lifetime users</span>
           </div>
           <h3>123Greetings</h3>
@@ -584,9 +618,9 @@
             <a href="https://apps.apple.com/in/app/greeting-cards-wishes/id718873921" target="_blank" class="project-link">App Store</a>
           </div>
         </div>
-        <div class="project-card fade-up fade-up-delay-2">
+        <div class="project-card fade-up">
           <div class="project-meta">
-            <span class="project-company">GoodWorkLabs</span>
+            <img src="assets/images/projectIcons/bluesense.webp" alt="BlueSensePlus" class="project-app-icon" draggable="false" />
             <span class="project-scale">Mahindra XUV400</span>
           </div>
           <h3>BlueSensePlus</h3>
@@ -595,9 +629,9 @@
             <a href="https://apps.apple.com/in/app/bluesenseplus-app-xuv400/id6443952494" target="_blank" class="project-link">App Store</a>
           </div>
         </div>
-        <div class="project-card fade-up fade-up-delay-3">
+        <div class="project-card fade-up fade-up-delay-1">
           <div class="project-meta">
-            <span class="project-company">IndusNet</span>
+            <img src="assets/images/projectIcons/camrematics.webp" alt="CameraMatics" class="project-app-icon" draggable="false" />
             <span class="project-scale">Logistics</span>
           </div>
           <h3>CameraMatics Fleet Management</h3>
@@ -620,7 +654,7 @@
         <div class="exp-item fade-up">
           <div class="exp-period">Mar 2025 – Apr 2026</div>
           <div class="exp-content">
-            <h3>Lead Mobile Architect</h3>
+            <h3>Lead App Developer</h3>
             <div class="exp-company">Teon LLC</div>
             <p>Architected and delivered Outline — a global high-security VPN across iOS, Android and macOS. Reduced build times by 20%, accelerated release cycles from monthly to 3-weekly. Leveraged Claude Code and ChatGPT throughout the lifecycle.</p>
           </div>
@@ -654,15 +688,23 @@
           <div class="exp-content">
             <h3>Senior Software Engineer</h3>
             <div class="exp-company">IndusNet Technologies Pvt. Ltd.</div>
-            <p>Designed and delivered 20+ iOS applications across fintech, health tech and enterprise domains. Coached 10+ developers, establishing Git workflows that reduced PR review time by 40%.</p>
+            <p>Designed and delivered 20+ mobile applications across fintech, health tech and enterprise domains. Coached 10+ developers, establishing Git workflows that reduced PR review time by 40%.</p>
+          </div>
+        </div>
+        <div class="exp-item fade-up">
+          <div class="exp-period">Jan 2017 – Sep 2017</div>
+          <div class="exp-content">
+            <h3>Senior Developer</h3>
+            <div class="exp-company">MET Technologies Pvt. Ltd.</div>
+            <p>Developed mobile applications owning the full lifecycle from requirements through to App Store deployment. Maintained clean codebases using Git best practices, ensuring code quality and maintainability.</p>
           </div>
         </div>
         <div class="exp-item fade-up">
           <div class="exp-period">Jan 2015 – May 2016</div>
           <div class="exp-content">
-            <h3>Specialist — Technology (iOS)</h3>
+            <h3>Specialist — Technology</h3>
             <div class="exp-company">Intrasoft Technologies Ltd.</div>
-            <p>Led iOS development of 123Greetings — 120M+ lifetime users. Integrated native advertising driving a 30% uplift in app ad revenue within 3 months.</p>
+            <p>Led the development of 123Greetings — 120M+ lifetime users. Integrated native advertising driving a 30% uplift in app ad revenue within 3 months.</p>
           </div>
         </div>
         <div class="exp-item fade-up">
@@ -714,9 +756,9 @@
             <p>Available for senior mobile engineering and technical leadership roles worldwide. Remote-first, open to relocation.</p>
           </div>
           <div class="contact-links">
-            <a href="mailto:aks5686@gmail.com" class="contact-link">✉️ aks5686@gmail.com</a>
-            <a href="https://www.linkedin.com/in/aks5686/" target="_blank" class="contact-link">💼 LinkedIn</a>
-            <a href="tel:+918017776984" class="contact-link">📞 +91 80177 76984</a>
+            <a href="mailto:aks5686@gmail.com" class="contact-link"><img src="assets/images/themeicons/email.svg" alt="" class="contact-link-icon" draggable="false" /> aks5686@gmail.com</a>
+            <a href="https://www.linkedin.com/in/aks5686/" target="_blank" class="contact-link"><img src="assets/images/themeicons/linkedin.svg" alt="" class="contact-link-icon" draggable="false" /> LinkedIn</a>
+            <a href="tel:+918017776984" class="contact-link"><img src="assets/images/themeicons/phone.svg" alt="" class="contact-link-icon" draggable="false" /> +91 80177 76984</a>
           </div>
         </div>
       </div>
@@ -738,8 +780,18 @@
       document.getElementById('mobileMenu').classList.remove('open');
     }
 
-    // PHOTO RIGHT-CLICK PROTECTION
+    // FAVICON — switch on dark/light theme
+    function updateFavicon() {
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.getElementById('favicon-32').href = `assets/images/icon-set/${theme}/icon-32.png`;
+      document.getElementById('favicon-16').href = `assets/images/icon-set/${theme}/icon-16.png`;
+    }
+    updateFavicon();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+
+    // IMAGE PROTECTION — block right-click and drag on all images
     document.addEventListener('contextmenu', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
+    document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
 
     // CONTACT FORM — AJAX with validation
     const contactForm = document.getElementById('contactForm');
@@ -798,9 +850,15 @@
       }
     });
 
-    // SCROLL ANIMATIONS
+    // SCROLL ANIMATIONS — animate in on scroll down, reverse on scroll back up
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        } else {
+          e.target.classList.remove('visible');
+        }
+      });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
