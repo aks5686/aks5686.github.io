@@ -10,6 +10,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon-set/light/A-180.png" />
   <title>Ayush Kumar Sethi — Mobile Architect & CTO</title>
   <meta name="description" content="Mobile Technical Architect and CTO with 15+ years building iOS, Android, Flutter and React Native apps used by millions globally." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aks5686.github.io/cto.html" />
+  <meta property="og:title" content="Ayush Kumar Sethi — Mobile Architect & CTO" />
+  <meta property="og:description" content="Mobile Technical Architect and CTO with 15+ years building iOS, Android, Flutter and React Native apps used by millions globally." />
+  <meta property="og:image" content="https://aks5686.github.io/assets/images/cover/AKS-OG-Social.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ayush Kumar Sethi — Mobile Architect & CTO" />
+  <meta name="twitter:description" content="Mobile Technical Architect and CTO with 15+ years building iOS, Android, Flutter and React Native apps used by millions globally." />
+  <meta name="twitter:image" content="https://aks5686.github.io/assets/images/cover/AKS-OG-Social.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -166,6 +177,15 @@
       border: 1.5px solid var(--border); transition: border-color 0.2s, transform 0.2s;
     }
     .btn-secondary:hover { border-color: var(--accent2); transform: translateY(-1px); }
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: var(--text2);
+      padding: 0.75rem 1.5rem; border-radius: 100px;
+      font-size: 0.95rem; font-weight: 500; text-decoration: none;
+      border: 1.5px solid var(--border); transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-download:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-1px); }
+    .btn-download img { width: 16px; height: 16px; object-fit: contain; pointer-events: none; }
     .hero-photo-wrap { position: relative; flex-shrink: 0; user-select: none; }
     .hero-photo-wrap::after {
       content: ''; position: absolute; inset: 0; border-radius: 2rem; z-index: 2; cursor: default;
@@ -214,6 +234,7 @@
       border-radius: 1rem; padding: 1.25rem 1.5rem; transition: transform 0.2s;
     }
     .highlight-card:hover { transform: translateY(-2px); }
+    .highlight-icon { width: 1.75rem; height: 1.75rem; object-fit: contain; pointer-events: none; margin-bottom: 0.6rem; display: block; }
     .highlight-card h4 {
       font-family: 'Syne', sans-serif; font-weight: 700;
       font-size: 0.95rem; color: var(--text); margin-bottom: 0.35rem;
@@ -358,9 +379,21 @@
     .contact-link-icon { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; pointer-events: none; }
 
     footer {
-      text-align: center; padding: 2rem; font-size: 0.8rem;
+      text-align: center; padding: 2rem 2rem 1.5rem; font-size: 0.8rem;
       color: var(--text2); border-top: 1px solid var(--border);
     }
+    .footer-share { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--card); color: var(--text2); border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem; border-radius: 100px;
+      font-size: 0.78rem; font-weight: 500; text-decoration: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .share-btn:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-1px); }
+    .share-btn img { width: 15px; height: 15px; object-fit: contain; pointer-events: none; }
+    .share-copied { color: #16a34a !important; border-color: #16a34a !important; }
 
     /* SCROLL ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -438,6 +471,7 @@
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Get in touch →</a>
           <a href="#projects" class="btn-secondary">View work</a>
+          <a href="assets/files/CV-AKS.pdf" download class="btn-download">↓ Download CV</a>
         </div>
         <div class="hero-stats">
           <div><div class="stat-number">15+</div><div class="stat-label">Years experience</div></div>
@@ -466,19 +500,23 @@
         </div>
         <div class="about-highlights">
           <div class="highlight-card fade-up fade-up-delay-1">
-            <h4>🛡️ High-security VPN at global scale</h4>
+            <img src="assets/images/themeicons/vpn.svg" alt="" class="highlight-icon" draggable="false" />
+            <h4>High-security VPN at global scale</h4>
             <p>Lead architect on Outline — open-source VPN deployed across iOS, Android and macOS for millions of users worldwide.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-2">
-            <h4>📱 120M+ user e-greetings platform</h4>
+            <img src="assets/images/themeicons/users.svg" alt="" class="highlight-icon" draggable="false" />
+            <h4>120M+ user e-greetings platform</h4>
             <p>Owned iOS architecture and delivery of 123Greetings — one of the world's largest e-greetings apps.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-3">
-            <h4>🚗 Connected car for Mahindra XUV400</h4>
+            <img src="assets/images/themeicons/car-connect.svg" alt="" class="highlight-icon" draggable="false" />
+            <h4>Connected car for Mahindra XUV400</h4>
             <p>Architected BlueSensePlus — exclusive EV companion app with Apple Watch integration.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-4">
-            <h4>🤖 AI-native development</h4>
+            <img src="assets/images/themeicons/aboutai.svg" alt="" class="highlight-icon" draggable="false" />
+            <h4>AI-native development</h4>
             <p>Integrated AI-assisted workflows across teams, improving code review efficiency and accelerating delivery cycles.</p>
           </div>
         </div>
@@ -654,7 +692,7 @@
         <div class="exp-item fade-up">
           <div class="exp-period">Mar 2025 – Apr 2026</div>
           <div class="exp-content">
-            <h3>Lead App Developer</h3>
+            <h3>Lead Mobile Developer</h3>
             <div class="exp-company">Teon LLC</div>
             <p>Architected and delivered Outline — a global high-security VPN across iOS, Android and macOS. Reduced build times by 20%, accelerated release cycles from monthly to 3-weekly. Leveraged Claude Code and ChatGPT throughout the lifecycle.</p>
           </div>
@@ -766,6 +804,17 @@
   </section>
 
   <footer>
+    <div class="footer-share">
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://aks5686.github.io/cto.html" target="_blank" rel="noopener" class="share-btn">
+        <img src="assets/images/themeicons/linkedin.svg" alt="" draggable="false" /> Share on LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Check%20out%20Ayush%27s%20portfolio%3A%20https%3A%2F%2Faks5686.github.io%2Fcto.html" target="_blank" rel="noopener" class="share-btn">
+        <img src="assets/images/themeicons/whatsapp.svg" alt="" draggable="false" /> Share on WhatsApp
+      </a>
+      <button class="share-btn" id="copyLinkBtn" onclick="copyLink()">
+        <img src="assets/images/themeicons/copy-link.svg" alt="" draggable="false" /> Copy Link
+      </button>
+    </div>
     <p>© 2026 Ayush Kumar Sethi · Built with Care</p>
   </footer>
 
@@ -778,6 +827,17 @@
     function closeMenu() {
       document.getElementById('hamburger').classList.remove('open');
       document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // COPY LINK
+    function copyLink() {
+      navigator.clipboard.writeText('https://aks5686.github.io/cto.html').then(() => {
+        const btn = document.getElementById('copyLinkBtn');
+        btn.classList.add('share-copied');
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = btn.innerHTML.replace('Copy Link', 'Copied!');
+        setTimeout(() => { btn.classList.remove('share-copied'); btn.innerHTML = originalHTML; }, 2500);
+      });
     }
 
     // FAVICON — switch on dark/light theme
