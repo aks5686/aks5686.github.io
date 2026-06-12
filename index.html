@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4SKCVK2SE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q4SKCVK2SE');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
@@ -22,6 +30,7 @@
   <meta name="twitter:description" content="Mobile Technical Architect with 15+ years building iOS, Android, Flutter and React Native apps used by millions globally." />
   <meta name="twitter:image" content="https://aks5686.github.io/assets/images/cover/AKS-OG-Social.png" />
   <link rel="canonical" href="https://aks5686.github.io" />
+  <link rel="manifest" href="/manifest.json" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +54,7 @@
       --bg: #fafaf7;
       --bg2: #f0ede6;
       --text: #111110;
-      --text2: #6b6860;
+      --text2: #5d5a54;
       --accent2: #e74c3c;
       --border: rgba(17,17,16,0.1);
       --card: #ffffff;
@@ -249,7 +258,7 @@
     }
     .highlight-card:hover { transform: translateY(-2px); }
     .highlight-icon { width: 1.75rem; height: 1.75rem; object-fit: contain; pointer-events: none; margin-bottom: 0.6rem; display: block; }
-    .highlight-card h4 {
+    .highlight-card h3 {
       font-family: 'Syne', sans-serif; font-weight: 700;
       font-size: 0.95rem; color: var(--text); margin-bottom: 0.35rem;
     }
@@ -507,6 +516,8 @@
     <a href="#contact" class="nav-cta" onclick="closeMenu()">Contact</a>
   </div>
 
+  <main>
+
   <section class="hero">
     <div class="hero-inner">
       <div>
@@ -526,7 +537,7 @@
         </div>
       </div>
       <div class="hero-photo-wrap">
-        <img src="assets/images/photo.jpg" alt="Ayush Kumar Sethi" class="hero-photo" draggable="false" />
+        <img src="assets/images/photo.jpg" alt="Ayush Kumar Sethi, Mobile Technical Architect" class="hero-photo" draggable="false" loading="eager" fetchpriority="high" />
       </div>
     </div>
   </section>
@@ -546,22 +557,22 @@
         <div class="about-highlights">
           <div class="highlight-card fade-up fade-up-delay-1">
             <img src="assets/images/themeicons/vpn.svg" alt="" class="highlight-icon" draggable="false" />
-            <h4>High-security VPN at global scale</h4>
+            <h3>High-security VPN at global scale</h3>
             <p>Lead architect on Outline — open-source VPN deployed across iOS, Android and macOS for millions of users worldwide.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-2">
             <img src="assets/images/themeicons/users.svg" alt="" class="highlight-icon" draggable="false" />
-            <h4>120M+ user e-greetings platform</h4>
+            <h3>120M+ user e-greetings platform</h3>
             <p>Owned iOS architecture and delivery of 123Greetings — one of the world's largest e-greetings apps.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-3">
             <img src="assets/images/themeicons/car-connect.svg" alt="" class="highlight-icon" draggable="false" />
-            <h4>Connected car for Mahindra XUV400</h4>
+            <h3>Connected car for Mahindra XUV400</h3>
             <p>Architected BlueSensePlus — exclusive EV companion app with Apple Watch integration.</p>
           </div>
           <div class="highlight-card fade-up fade-up-delay-4">
             <img src="assets/images/themeicons/aboutai.svg" alt="" class="highlight-icon" draggable="false" />
-            <h4>AI-native development</h4>
+            <h3>AI-native development</h3>
             <p>Integrated AI-assisted workflows across teams, improving code review efficiency and accelerating delivery cycles.</p>
           </div>
         </div>
@@ -576,7 +587,7 @@
       <p class="section-sub fade-up fade-up-delay-2">Deep across native and cross-platform, with architectural thinking at every layer.</p>
       <div class="skills-grid">
         <div class="skill-card fade-up">
-          <div class="skill-icon"><img src="assets/images/themeicons/ios.svg" alt="iOS" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ios.svg" alt="iOS Development" draggable="false" /></div>
           <h3>iOS Development</h3>
           <div class="skill-tags">
             <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span>
@@ -584,7 +595,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-1">
-          <div class="skill-icon"><img src="assets/images/themeicons/android.svg" alt="Android" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/android.svg" alt="Android Development" draggable="false" /></div>
           <h3>Android Development</h3>
           <div class="skill-tags">
             <span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span>
@@ -592,7 +603,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-2">
-          <div class="skill-icon"><img src="assets/images/themeicons/cross-platform.svg" alt="Cross-Platform" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/cross-platform.svg" alt="Cross-Platform Development — Flutter, React Native" draggable="false" /></div>
           <h3>Cross-Platform</h3>
           <div class="skill-tags">
             <span class="tag">Flutter</span><span class="tag">React Native</span>
@@ -600,7 +611,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-3">
-          <div class="skill-icon"><img src="assets/images/themeicons/architecture.svg" alt="Architecture" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/architecture.svg" alt="Mobile Architecture and Design Patterns" draggable="false" /></div>
           <h3>Architecture & Design</h3>
           <div class="skill-tags">
             <span class="tag">MVVM</span><span class="tag">VIPER</span><span class="tag">Clean Architecture</span>
@@ -608,7 +619,7 @@
           </div>
         </div>
         <div class="skill-card fade-up">
-          <div class="skill-icon"><img src="assets/images/themeicons/ci-cd.svg" alt="CI/CD" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ci-cd.svg" alt="DevOps and CI/CD — GitHub Actions, Fastlane" draggable="false" /></div>
           <h3>DevOps & CI/CD</h3>
           <div class="skill-tags">
             <span class="tag">GitHub Actions</span><span class="tag">Fastlane</span>
@@ -616,7 +627,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-1">
-          <div class="skill-icon"><img src="assets/images/themeicons/ai.svg" alt="AI" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/ai.svg" alt="AI-Assisted Development — Claude Code, Cursor, Copilot" draggable="false" /></div>
           <h3>AI-Assisted Development</h3>
           <div class="skill-tags">
             <span class="tag">Claude Code</span><span class="tag">ChatGPT</span>
@@ -624,7 +635,7 @@
           </div>
         </div>
         <div class="skill-card fade-up fade-up-delay-2">
-          <div class="skill-icon"><img src="assets/images/themeicons/leader.svg" alt="Leadership" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/leader.svg" alt="Engineering Leadership and Team Delivery" draggable="false" /></div>
           <h3>Leadership & Delivery</h3>
           <div class="skill-tags">
             <span class="tag">Team Mentoring</span><span class="tag">Pre-Sales</span>
@@ -633,7 +644,7 @@
           </div>
         </div>
         <div class="skill-card exploring fade-up fade-up-delay-3">
-          <div class="skill-icon"><img src="assets/images/themeicons/explore.svg" alt="Exploring" draggable="false" /></div>
+          <div class="skill-icon"><img src="assets/images/themeicons/explore.svg" alt="Currently Exploring — LLM Integration, RAG, Agentic AI" draggable="false" /></div>
           <h3>Currently Exploring</h3>
           <div class="exploring-label">Active learning</div>
           <div class="skill-tags">
@@ -832,6 +843,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="footer-share">
       <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://aks5686.github.io" target="_blank" rel="noopener" class="share-btn">
@@ -848,6 +861,9 @@
   </footer>
 
   <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑ Top</button>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
   <script>
     // HAMBURGER
@@ -885,7 +901,20 @@
     document.addEventListener('contextmenu', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
     document.addEventListener('dragstart', e => { if(e.target.tagName==='IMG') e.preventDefault(); });
 
-    // CONTACT FORM — AJAX with validation
+    // FIREBASE INIT
+    const firebaseConfig = {
+      apiKey: "AIzaSyAEo3lO4-7DFRot1-UyAYZ6ox8SWHf1ZOU",
+      authDomain: "aks---portfolio.firebaseapp.com",
+      projectId: "aks---portfolio",
+      storageBucket: "aks---portfolio.firebasestorage.app",
+      messagingSenderId: "923068660133",
+      appId: "1:923068660133:web:206c9a04ec2cd847a3504c",
+      measurementId: "G-RE6WRLKR2F"
+    };
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // CONTACT FORM — Firebase Firestore
     let feedbackTimer;
     function showFeedback(el, type, msg) {
       clearTimeout(feedbackTimer);
@@ -903,11 +932,9 @@
       const feedback = document.getElementById('formFeedback');
       const btn = document.getElementById('submitBtn');
 
-      // Clear errors
       [name, email, message].forEach(f => f.classList.remove('error'));
       feedback.className = 'form-feedback';
 
-      // Validate
       let valid = true;
       if (!name.value.trim()) { name.classList.add('error'); valid = false; }
       if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('error'); valid = false; }
@@ -922,27 +949,16 @@
       btn.textContent = 'Sending...';
 
       try {
-        const response = await fetch('https://formspree.io/f/xrevqrpo', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name: name.value.trim(),
-            email: email.value.trim(),
-            message: message.value.trim()
-          })
+        await db.collection('contacts').add({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          message: message.value.trim(),
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
-        const data = await response.json();
-        if (response.ok) {
-          showFeedback(feedback, 'success', '✓ Message sent! I\'ll get back to you soon.');
-          contactForm.reset();
-        } else {
-          const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : (data.error || 'Submission failed.');
-          throw new Error(errMsg);
-        }
+        showFeedback(feedback, 'success', '✓ Message sent! I\'ll get back to you soon.');
+        contactForm.reset();
       } catch (err) {
-        showFeedback(feedback, 'error', (err && err.message && err.message !== 'Failed to fetch')
-          ? err.message
-          : 'Something went wrong. Please email me directly at aks5686@gmail.com');
+        showFeedback(feedback, 'error', 'Something went wrong. Please email me directly at aks5686@gmail.com');
       } finally {
         btn.textContent = 'Send message →';
         btn.disabled = false;
@@ -972,6 +988,11 @@
     new IntersectionObserver(([e]) => {
       document.getElementById('backToTop').classList.toggle('visible', !e.isIntersecting);
     }, { threshold: 0 }).observe(document.querySelector('.hero'));
+
+    // LAZY LOADING — apply to all images except the hero photo
+    document.querySelectorAll('img:not(.hero-photo)').forEach(img => {
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    });
 
     // ACTIVE NAV — highlight link for section in view
     const navObserver = new IntersectionObserver(entries => {
